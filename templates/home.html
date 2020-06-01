@@ -19,6 +19,10 @@ h3 {
   font-family: 'Montserrat', monospace;
 }
 
+.rounded {
+  background-color: #c3edea;
+}
+
 .form-control {
   width: 80%;
   padding: 10px;
@@ -26,6 +30,7 @@ h3 {
   border: solid 1px;
   border-color: #679b9b;
   background-color: #e8e4e1;
+  display: inline-block;
 }
 
 .info {
@@ -36,7 +41,7 @@ h3 {
   background: linear-gradient(120deg,#f40552,#ffcbcb);
   position: relative;
   right: 5%;
-  top: 5px;
+  top: -2px;
 }
 
 .info:hover {
@@ -50,13 +55,13 @@ i {
 
 </style>
 
-<div class="shadow p-3 mb-5 bg-white rounded">
-  <h1>🙏 Welcome 🙏</h1>
-  <h3>Your favourite Hollywood movie👇👇👇</h3>
-</div>
 
-  <form action="{{url_for('recommend')}}">
-    <input type="text" name="movie" class="form-control" placeholder="Movie name here">
-    <button type="submit" class="btn btn-info info"><i class="fas fa-caret-right fa-2x"> </i></button>
-  </form>
+    <h1>🙏 Welcome 🙏</h1>
+    <h3>Your favourite Hollywood movie👇👇👇</h3>
+
+
+    <form action="/recommend">
+      <input type="text" name="movie" class="form-control" placeholder="Movie name here">
+      <button type="submit" class="btn btn-info info"><i class="fas fa-caret-right fa-2x"> </i></button>
+    </form>
 {% endblock %}
